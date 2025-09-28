@@ -1,4 +1,4 @@
-package com.cesde.model;
+package com.cesde.Chatbot.model;
 
 import java.time.LocalDateTime;
 

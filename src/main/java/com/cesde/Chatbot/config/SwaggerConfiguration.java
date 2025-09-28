@@ -1,4 +1,4 @@
-package com.cesde.config;
+package com.cesde.Chatbot.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -8,7 +8,6 @@ import io.swagger.v3.oas.models.servers.Server;
 import io.swagger.v3.oas.models.tags.Tag;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import java.util.List;
 
 @Configuration
@@ -24,7 +23,7 @@ class SwaggerConfiguracion {
 	  public OpenAPI userApiOpenAPI() {
 	    return new OpenAPI()
 	      .info(new Info()
-	        .title("🚀 CESDE - User Management API")
+	        .title("🚀 Chatbot - Documentación de uso")
 	        .description("Simple REST API for learning Spring Boot 3.x - CESDE Student project")
 	        .version("1.0.0")
 	        .contact(new Contact()
@@ -40,25 +39,15 @@ class SwaggerConfiguracion {
 	      .servers(List.of(
 	        new Server()
 	          .url("http://localhost:80")
-	          .description("🛠️ Local Development Server")
+	          .description("🛠️ Servidor local")
 	        )
 	      )
 	      .tags(List.of(
 	        new Tag()
-	          .name("👥 User Management")
-	          .description("CRUD operations for users: create, read, update, delete"),
-	        new Tag()
-	          .name("🔍 Searches")
-	          .description("Different ways to search for users"),
-	        new Tag()
-	          .name("📊 Statistics")
-	          .description("System counters and statistics"),
-	        new Tag()
-	        .name("Companys Management")
-	        .description("CRUD operations for companys: create, read, update, delete")
+	          .name("Gestión de usuarios")
+	          .description("CRUD operations for users: create, read, update, delete")
 	      )
 	    );
 	  }
 	}
-
 
