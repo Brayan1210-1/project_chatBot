@@ -13,6 +13,9 @@ import java.util.List;
 @Configuration
 class SwaggerConfiguracion {
 	
+	
+	//FALTA RESPUESTA Y ACABO MI PARTE
+	
 	/**
 	 * Swagger/OpenAPI configuration for documenting our API
 	 * 
@@ -38,14 +41,23 @@ class SwaggerConfiguracion {
 	      )
 	      .servers(List.of(
 	        new Server()
-	          .url("http://localhost:80")
+	          .url("http://localhost:443")
 	          .description("🛠️ Servidor local")
 	        )
 	      )
 	      .tags(List.of(
 	        new Tag()
 	          .name("Gestión de usuarios")
-	          .description("CRUD operations for users: create, read, update, delete")
+	          .description("administración básica de usuarios (leer,borrar,actualizar y crear)"),
+	        new Tag()
+	        .name("Gestión de categorias")
+	        .description("leer categorias existentes"),
+	        new Tag()
+	        .name("Gestión de preguntas")
+	        .description("Modificar preguntas"),
+	        new Tag()
+	        .name("Gestión de respuestas")
+	        .description("administrar las respuestas existentes")
 	      )
 	    );
 	  }

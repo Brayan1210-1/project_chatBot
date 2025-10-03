@@ -53,6 +53,7 @@ public class UsuarioControlador {
             @ApiResponse(responseCode = "201", description = "Usuario creado exitosamente"),
             @ApiResponse(responseCode = "400", description = "Datos inválidos o email ya existe")
     })
+	
     public ResponseEntity<UsuarioDTO> crearUsuario(
             @io.swagger.v3.oas.annotations.parameters.RequestBody(
                     description = "Información del nuevo usuario", required = true)
@@ -72,9 +73,7 @@ public class UsuarioControlador {
     public ResponseEntity<UsuarioDTO> actualizarUsuario(
             @Parameter(description = "ID del usuario", required = true, example = "1")
             @PathVariable Long id,
-
             @Valid @RequestBody UsuarioDTO userDTO) {
-
         try {
             UsuarioDTO usuarioActualizado = usuarioServicio.actualizarUsuario(id, userDTO);
             return ResponseEntity.ok(usuarioActualizado);
