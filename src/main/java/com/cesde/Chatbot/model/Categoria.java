@@ -2,8 +2,11 @@ package com.cesde.Chatbot.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Id;
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+
+
+
 
 @MappedSuperclass
 public class Categoria {
@@ -18,12 +21,11 @@ public class Categoria {
     private String descripcion;
 
 
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-
     @Column (name = "createdAt", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @Column (name = "createdAt", nullable = false )
+    @Column (name = "updatedAt", nullable = false )
+
     private LocalDateTime updatedAt;
 
     //constructor sin parámetros

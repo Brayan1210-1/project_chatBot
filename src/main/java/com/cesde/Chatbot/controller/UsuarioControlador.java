@@ -72,9 +72,7 @@ public class UsuarioControlador {
     public ResponseEntity<UsuarioDTO> actualizarUsuario(
             @Parameter(description = "ID del usuario", required = true, example = "1")
             @PathVariable Long id,
-
             @Valid @RequestBody UsuarioDTO userDTO) {
-
         try {
             UsuarioDTO usuarioActualizado = usuarioServicio.actualizarUsuario(id, userDTO);
             return ResponseEntity.ok(usuarioActualizado);
