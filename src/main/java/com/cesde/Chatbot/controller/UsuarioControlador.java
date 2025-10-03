@@ -53,7 +53,6 @@ public class UsuarioControlador {
             @ApiResponse(responseCode = "201", description = "Usuario creado exitosamente"),
             @ApiResponse(responseCode = "400", description = "Datos inválidos o email ya existe")
     })
-	
     public ResponseEntity<UsuarioDTO> crearUsuario(
             @io.swagger.v3.oas.annotations.parameters.RequestBody(
                     description = "Información del nuevo usuario", required = true)

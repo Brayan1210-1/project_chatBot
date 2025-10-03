@@ -1,8 +1,11 @@
 package com.cesde.Chatbot.model;
 
 import java.time.LocalDateTime;
+
 import jakarta.persistence.Id;
 import jakarta.persistence.*;
+
+
 
 
 @MappedSuperclass
@@ -17,10 +20,12 @@ public class Categoria {
     @Column (name = "descripcion", length = 100)
     private String descripcion;
 
+
     @Column (name = "createdAt", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @Column (name = "updatedAt", nullable = false )
+
     private LocalDateTime updatedAt;
 
     //constructor sin parámetros

@@ -13,15 +13,6 @@ import java.util.List;
 @Configuration
 class SwaggerConfiguracion {
 	
-	
-	//FALTA RESPUESTA Y ACABO MI PARTE
-	
-	/**
-	 * Swagger/OpenAPI configuration for documenting our API
-	 * 
-	 * This configuration creates the automatic documentation that can be viewed at:
-	 * http://localhost:80/swagger-ui.html
-	 */
 	  @Bean
 	  public OpenAPI userApiOpenAPI() {
 	    return new OpenAPI()
@@ -58,6 +49,7 @@ class SwaggerConfiguracion {
 	        new Tag()
 	        .name("Gestión de respuestas")
 	        .description("administrar las respuestas existentes")
+	         
 	      )
 	    );
 	  }
