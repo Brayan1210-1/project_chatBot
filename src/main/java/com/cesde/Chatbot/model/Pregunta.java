@@ -35,4 +35,12 @@ public class Pregunta extends Contenido {
 	public void setCategoria(CategoriaPreguntaRespuesta categoria) {
 		this.categoria = categoria;
 	}
+
+	public List<Respuesta> getRespuestas() {
+		return respuestas;
+	}
+
+	public void setRespuestas(List<Respuesta> respuestas) {
+		this.respuestas = respuestas;
+	}
 }
