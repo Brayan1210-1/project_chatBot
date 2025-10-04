@@ -1,12 +1,16 @@
 package com.cesde.Chatbot.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
@@ -31,6 +35,9 @@ public class Usuario {
 	@Email
 	@Column(name = "email", nullable = false, length = 50)
 	private String email;
+	
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Sugerencia> sugerencias = new ArrayList<>();
 	
 	@Column(name = "telefono", length = 15)
 	private String telefono;
@@ -110,5 +117,13 @@ public class Usuario {
 
 	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+
+	public List<Sugerencia> getSugerencias() {
+		return sugerencias;
+	}
+
+	public void setSugerencias(List<Sugerencia> sugerencias) {
+		this.sugerencias = sugerencias;
 	}
 }

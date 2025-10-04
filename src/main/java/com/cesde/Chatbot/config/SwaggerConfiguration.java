@@ -48,7 +48,13 @@ class SwaggerConfiguracion {
 	        .description("Modificar preguntas"),
 	        new Tag()
 	        .name("Gestión de respuestas")
-	        .description("administrar las respuestas existentes")
+	        .description("administrar las respuestas existentes"),
+	        new Tag()
+	        .name("Gestión de categoria sugerencia")
+	        .description("administrar las categorias de sugerencias existentes"),
+	        new Tag()
+	        .name("Gestión de sugerencias")
+	        .description("métodos crud para las sugerencias")
 	         
 	      )
 	    );
