@@ -1,4 +1,4 @@
-package com.cesde.Chatbot.model;
+package com.cesde.Chatbot.superclass;
 
 import java.time.LocalDateTime;
 
@@ -14,7 +14,7 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column (name = "nombre", nullable = false, length = 90 )
+    @Column (name = "nombre", nullable = false, length = 90, unique = true )
     private String nombre;
 
     @Column (name = "descripcion", length = 100)

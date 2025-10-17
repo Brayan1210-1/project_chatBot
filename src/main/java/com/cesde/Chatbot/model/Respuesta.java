@@ -1,6 +1,8 @@
 package com.cesde.Chatbot.model;
 
 
+import com.cesde.Chatbot.superclass.Contenido;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
