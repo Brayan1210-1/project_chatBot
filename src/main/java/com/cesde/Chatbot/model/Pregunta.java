@@ -3,6 +3,8 @@ package com.cesde.Chatbot.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.cesde.Chatbot.superclass.Contenido;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;

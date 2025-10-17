@@ -1,4 +1,4 @@
-package com.cesde.Chatbot.model;
+package com.cesde.Chatbot.superclass;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.Column;
@@ -16,7 +16,7 @@ public class Contenido {
  @GeneratedValue(strategy = GenerationType.IDENTITY)
  private Long id;
  
- @Column (name = "enunciado", nullable = false, length = 400 )
+ @Column (name = "enunciado", nullable = false, length = 400, unique = true )
  private String enunciado;
  
  @Column (name = "createdAt", nullable = false, updatable = false)
