@@ -33,7 +33,9 @@ link página: http://localhost:443/api/  + sección que quieras ver
 
 ejem: http://localhost:443/api/categorias
 
-
-
+Los endpoints disponibles se miran en el swagger:
 
 link documentación swagger: http://localhost:443/swagger-ui/index.html 
+
+
+
